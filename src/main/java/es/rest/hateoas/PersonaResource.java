@@ -21,7 +21,7 @@ public class PersonaResource extends ResourceSupport {
 	public PersonaResource(final Persona persona) {
 		this.persona = persona;
 
-		this.add(linkTo(methodOn(PersonaRestController.class).obtenerPersonas()).withRel("personas"));
+		this.add(linkTo(methodOn(PersonaRestController.class).obtenerPersonas(1, null)).withRel("personas"));
 
 		this.add(linkTo(PersonaRestController.class).slash(persona.getId()).withSelfRel());
 		this.add(linkTo(PersonaRestController.class).slash(persona.getId()).slash("nifoculto")
