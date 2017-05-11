@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * Clase principal
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan
+@EnableResourceServer
 @EnableAutoConfiguration
 public class ServicesApplication extends SpringBootServletInitializer {
 
