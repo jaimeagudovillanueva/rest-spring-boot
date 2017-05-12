@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.authentication.configurers.ldap.LdapAuthenticationProviderConfigurer;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 
-import es.rest.security.LdapProperties;
+import es.rest.security.properties.LdapProperties;
 
 /**
  * Clase principal

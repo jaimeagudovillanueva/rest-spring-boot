@@ -8,8 +8,12 @@ security:
      enabled: false
 
 ldap:
-  pre:
-     url: ldap://ldappre.map.es:389
-     user: cn=admin,dc=map,dc=es
-     password: cambiame
-     base: dc=map,dc=es
+  url: ldap://ldappre.map.es:389
+  user: cn=admin,dc=map,dc=es
+  password: cambiame
+  base: dc=map,dc=es
+        
+oauth:
+  clientid: 05355B83243D1A89ECEE677A97690D73
+  secret: BAF1129D03CE333CF4D9EB40EBD1754E
+  

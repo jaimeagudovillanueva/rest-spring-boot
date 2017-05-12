@@ -1,10 +1,10 @@
-package es.rest.security;
+package es.rest.security.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties("ldap.pre")
+@ConfigurationProperties("ldap")
 public class LdapProperties {
 
 	private String url;
