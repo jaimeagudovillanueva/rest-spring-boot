@@ -2,6 +2,11 @@ spring:
   datasource:
      jndi-name: jdbc/mptArchivoDGFP
      driver-class-name: oracle.jdbc.driver.OracleDriver
+     
+security:
+  basic:
+     enabled: false
+
 ldap:
   pre:
      url: ldap://ldappre.map.es:389
