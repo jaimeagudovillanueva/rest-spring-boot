@@ -26,18 +26,9 @@ public class ServicesApplication extends SpringBootServletInitializer {
 	public static void main(final String[] args) {
 		SpringApplication.run(ServicesApplication.class, args);
 	}
-
+	
 	@Autowired
 	public void authenticationManager(final AuthenticationManagerBuilder builder) throws Exception {
-
-		/*
-		 * builder.userDetailsService(new UserDetailsService() {
-		 *
-		 * @Override public UserDetails loadUserByUsername(final String s)
-		 * throws UsernameNotFoundException { final Usuario usuario = new
-		 * Usuario(); usuario.setUsername(s); usuario.setPassword("cambiame");
-		 * usuario.setActivo(true); return usuario; } });
-		 */
 
 		final DefaultSpringSecurityContextSource contextSource = new DefaultSpringSecurityContextSource(
 				"ldap://ldappre.map.es:389");
@@ -52,6 +43,5 @@ public class ServicesApplication extends SpringBootServletInitializer {
 
 		ldapAuthenticationProviderConfigurer.userSearchFilter("uid={0}").userSearchBase("")
 				.contextSource(contextSource);
-
 	}
 }

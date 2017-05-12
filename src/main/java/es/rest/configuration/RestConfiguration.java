@@ -7,7 +7,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 /**
- * Configuramos los servicios Rest con el filtro Cors para que se puedan realizar peticiones desde otros servidores
+ * Configuramos los servicios Rest con el filtro Cors para que se puedan
+ * realizar peticiones desde otros servidores
  *
  * @author jaime.agudo
  *
@@ -15,17 +16,17 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class RestConfiguration {
 
-	    @Bean
-	    public CorsFilter corsFilter() {
+	@Bean
+	public CorsFilter corsFilter() {
 
-	        final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-	        final CorsConfiguration config = new CorsConfiguration();
-	        config.setAllowCredentials(true);
-	        config.addAllowedOrigin("*");
-	        config.addAllowedHeader("*");
-	        config.addAllowedMethod("GET");
-	        config.addAllowedMethod("PUT");
-	        source.registerCorsConfiguration("/**", config);
-	        return new CorsFilter(source);
-	    }
+		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		final CorsConfiguration config = new CorsConfiguration();
+		config.setAllowCredentials(true);
+		config.addAllowedOrigin("*");
+		config.addAllowedHeader("*");
+		config.addAllowedMethod("GET");
+		config.addAllowedMethod("PUT");
+		source.registerCorsConfiguration("/**", config);
+		return new CorsFilter(source);
+	}
 }

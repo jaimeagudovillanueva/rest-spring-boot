@@ -15,9 +15,4 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.antMatchers("/").permitAll()
 			.antMatchers("/personas/**").authenticated();
 	}
-
-	/*
-	 * @Override public void configure(final ResourceServerSecurityConfigurer
-	 * resources) { resources.resourceId(null); }
-	 */
 }
