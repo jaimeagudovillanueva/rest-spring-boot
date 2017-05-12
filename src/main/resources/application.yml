@@ -1,0 +1,10 @@
+spring:
+  datasource:
+     jndi-name: jdbc/mptArchivoDGFP
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+ldap:
+  pre:
+     url: ldap://ldappre.map.es:389
+     user: cn=admin,dc=map,dc=es
+     password: cambiame
+     base: dc=map,dc=es
